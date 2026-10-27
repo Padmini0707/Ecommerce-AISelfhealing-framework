@@ -1,0 +1,72 @@
+{
+  "loginPage": {
+    "username": {
+      "type": "id",
+      "value": "user-name"
+    },
+    "password": {
+      "type": "id",
+      "value": "password"
+    },
+    "loginButton": {
+      "type": "id",
+      "value": "login-button"
+    },
+    "errorMessage": {
+      "type": "role",
+      "value": "alert"
+    }
+  },
+  "products": {
+    "productCard": {
+      "type": "css",
+      "value": "[data-test='inventory-item']"
+    },
+    "productName": {
+      "type": "css",
+      "value": "[data-test='inventory-item-name']"
+    },
+    "productPrice": {
+      "type": "css",
+      "value": "[data-test='inventory-item-price']"
+    },
+    "carticon":{
+      "type":"css",
+      "value":"[data-test='shopping-cart-link']"
+    }
+  },
+  "cart":{
+    "continuebtn":{
+      "type":"id",
+      "value":"continue-shopping"
+    },
+    "checkoutbtn":{
+      "type":"id",
+      "value":"checkout"
+    },
+    "fnmaedetail":{
+      "type":"id",
+      "value":"first-name"
+    },
+    "lnmaedetail":{
+      "type":"id",
+      "value":"last-name"
+    },
+    "zipcode":{
+      "type":"id",
+      "value":"postal-code"
+    },
+    "continuebutton":{
+      "type":"id",
+      "value":"continue"
+    },
+    "totalprice":{
+      "type":"css",
+      "value":"[data-test='subtotal-label']"
+      },
+    "finishbtn":{
+      "type":"id",
+      "value":"finish"
+    }
+  }
+}

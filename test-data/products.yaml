@@ -1,0 +1,22 @@
+
+products:
+  backpack:
+    name: "Sauce Labs Backpack"
+    price: "$29.99"
+    button: "Add to cart"
+
+  onesie:
+    name: "Sauce Labs Onesie"
+    price: "$7.99"
+    button: "Add to cart"
+
+  jacket:
+    name: "Sauce Labs Fleece Jacket"
+    price: "$49.99"
+    button: "Add to cart"
+
+  backpackremove:
+    name: "Sauce Labs Backpack"
+    price: "$29.99"
+    button: "Remove"
+

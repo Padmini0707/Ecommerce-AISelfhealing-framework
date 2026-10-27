@@ -1,0 +1,26 @@
+personaldata:
+  - scenario: "Valid checkout"
+    firstname: "John"
+    lastname: "Doe"
+    zipcode: "560001"
+    expectedError: ""
+
+  - scenario: "Missing first name"
+    firstname: ""
+    lastname: "Doe"
+    zipcode: "560001"
+    expectedError: "Error: First Name is required"
+
+  - scenario: "Missing last name"
+    firstname: "John"
+    lastname: ""
+    zipcode: "560001"
+    expectedResult: "error"
+    expectedError: "Error: Last Name is required"
+
+  - scenario: "Missing postal code"
+    firstname: "John"
+    lastname: "Doe"
+    zipcode: ""
+    expectedResult: "error"
+    expectedError: "Error: Postal Code is required"
