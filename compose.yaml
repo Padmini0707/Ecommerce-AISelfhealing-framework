@@ -1,0 +1,6 @@
+services:
+  chromium:
+    image: ecommerce-playwright:1.0
+    volumes: 
+       - ./playwright-report-local/chromium:/app/playwright-report
+       - ./test-results/chromium:/app/test-results
