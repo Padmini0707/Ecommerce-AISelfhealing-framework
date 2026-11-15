@@ -31,6 +31,8 @@ pipeline{
         stage('Environment Validation'){
             steps{
                  echo 'Validating Ubuntu Agent Environment'
+
+                sh '''
                  echo "===== NODE ====="
                     node --version
 
@@ -42,6 +44,8 @@ pipeline{
 
                 echo "=====DOCKER DAEMON ===="
                 docker info
+
+                '''
             }
         }
     }
