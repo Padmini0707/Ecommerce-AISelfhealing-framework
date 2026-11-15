@@ -27,6 +27,23 @@ pipeline{
                 '''
             }
         }
+
+        stage('Environment Validation'){
+            steps{
+                 echo 'Validating Ubuntu Agent Environment'
+                 echo "===== NODE ====="
+                    node --version
+
+                echo "=====NPM====="
+                npm --version
+
+                echo "=====DOCKER===="
+                docker --version
+
+                echo "=====DOCKER DAEMON ===="
+                docker info
+            }
+        }
     }
 
 }
