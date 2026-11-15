@@ -1,29 +1,31 @@
 const locators = require('../locators/locators.json');
-const { getLocator } = require('../utils/locator-helper');
+const { getSelfHealingLocator } = require('../utils/locator-helper');
 
 class LoginPage {
     constructor(page) {
         this.page = page;
-        this.username = getLocator(
+   
+        this.username =getSelfHealingLocator(
         page,
         locators.loginPage.username);
 
-        this.password = getLocator(
+        this.password = getSelfHealingLocator(
         page,
         locators.loginPage.password
         );
 
-        this.loginButton = getLocator(
+        this.loginButton = getSelfHealingLocator(
         page,
         locators.loginPage.loginButton
         );
 
-        this.errorMessage = getLocator(
+        this.errorMessage = getSelfHealingLocator(
         page,
         locators.loginPage.errorMessage
         );
+      }
 
-    }
+    //}
 
     async open() {
     await this.page.goto('/');

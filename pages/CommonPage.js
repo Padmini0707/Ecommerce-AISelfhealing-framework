@@ -1,16 +1,18 @@
 const locators = require('../locators/locators.json');
-const { getLocator } = require('../utils/locator-helper');
+const { getSelfHealingLocator } = require('../utils/locator-helper');
+const { LocatorNarrowing } =
+  require('../utils/locator-narrowing');
 
 class CommonPage{
     constructor(page){
         this.page = page;
-        this.productCard=getLocator(page,
+        this.productCard=getSelfHealingLocator(page,
             locators.products.productCard
         );
-        this.productName=getLocator(page,
+        this.productName=getSelfHealingLocator(page,
             locators.products.productName
         );
-        this.productPrice=getLocator(page,
+        this.productPrice=getSelfHealingLocator(page,
             locators.products.productPrice
         );
     }
@@ -18,9 +20,23 @@ class CommonPage{
     async handleTable(name){
         const products=this.productCard;
 
-        const product=products.filter({
-        has:this.productName
-        .getByText(name,{exact:true})});
+        const productName = this.productName.getByText(
+        name,{ exact: true });
+
+        const product = LocatorNarrowing.byCondition(
+        products,
+        collection => LocatorNarrowing.byChild(
+            collection,
+            productName
+        )
+        );
+
+        await LocatorNarrowing.expectUnique(product,'product lookup');
+
+
+        // const product=products.filter({
+        // has:this.productName
+        // .getByText(name,{exact:true})});
 
         await product.waitFor({
             state:'visible',
@@ -45,13 +61,27 @@ class CommonPage{
         await addtocart.click();
     }
 
-    async checkPresenceofPrice(locators,exprice){
-        const price=await locators.filter({
-            has:this.productPrice
-            .getByText(exprice,{exact:true})
-        });
+    async checkPresenceofPrice(products, expectedPrice){
 
-        return price;
+        const priceLocator = this.productPrice.getByText(
+        expectedPrice,
+        { exact: true }
+        );
+
+        const matchingProducts = LocatorNarrowing.byChild(
+        products,
+        priceLocator
+        );
+
+        await LocatorNarrowing.expectUnique(matchingProducts,'price loopkup');
+
+        return matchingProducts;
+        // const price=await locators.filter({
+        //     has:this.productPrice
+        //     .getByText(exprice,{exact:true})
+        // });
+
+        // return price;
     }
 
     async getAllProductPrices() {

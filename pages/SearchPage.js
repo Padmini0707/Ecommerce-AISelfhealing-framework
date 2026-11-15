@@ -1,5 +1,5 @@
 const locators = require('../locators/locators.json');
-const { getLocator } = require('../utils/locator-helper');
+const { getSelfHealingLocator } = require('../utils/locator-helper');
 const { CommonPage } = require('./CommonPage');
 
 class SearchPage extends CommonPage{
@@ -15,7 +15,7 @@ class SearchPage extends CommonPage{
         // this.productPrice=getLocator(page,
         //     locators.products.productPrice
         // );
-        this.carticon=getLocator(page,
+        this.carticon=getSelfHealingLocator(page,
             locators.products.carticon
         );
     }
@@ -44,7 +44,7 @@ class SearchPage extends CommonPage{
 
         await product.scrollIntoViewIfNeeded();
 
-        const price=await getLocator(product,
+        const price=await getSelfHealingLocator(product,
             locators.products.productPrice
         ).textContent();
 

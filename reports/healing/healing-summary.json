@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-11-09T08:25:53.539Z",
+  "totalEvents": 67,
+  "configuredFallbackCount": 35,
+  "domDiscoveryCount": 32,
+  "healedCount": 67,
+  "failedCount": 0,
+  "unknownStatusCount": 0,
+  "healingSuccessRate": 100,
+  "averageDOMMatchScore": 85.05,
+  "invalidLines": 0,
+  "testSummary": {
+    "Self-healing locator resolution": {
+      "totalEvents": 35,
+      "healed": 35,
+      "failed": 0,
+      "configuredFallback": 35,
+      "domDiscovery": 0
+    },
+    "Unknown test: DOM-based locator recovery": {
+      "totalEvents": 8,
+      "healed": 8,
+      "failed": 0,
+      "configuredFallback": 0,
+      "domDiscovery": 8
+    },
+    "validLogin: DOM-based locator recovery": {
+      "totalEvents": 8,
+      "healed": 8,
+      "failed": 0,
+      "configuredFallback": 0,
+      "domDiscovery": 8
+    },
+    "invalidLogin: DOM-based locator recovery": {
+      "totalEvents": 8,
+      "healed": 8,
+      "failed": 0,
+      "configuredFallback": 0,
+      "domDiscovery": 8
+    },
+    "lockedOutLogin: DOM-based locator recovery": {
+      "totalEvents": 8,
+      "healed": 8,
+      "failed": 0,
+      "configuredFallback": 0,
+      "domDiscovery": 8
+    }
+  }
+}

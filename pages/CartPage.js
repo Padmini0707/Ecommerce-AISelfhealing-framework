@@ -1,33 +1,33 @@
 const locators = require('../locators/locators.json');
-const { getLocator } = require('../utils/locator-helper');
+const { getSelfHealingLocator } = require('../utils/locator-helper');
 const { CommonPage } = require('./CommonPage');
 
 class CartPage extends CommonPage{
     constructor(page){
         super(page);
-        this.continuebtn=getLocator(page,
+        this.continuebtn=getSelfHealingLocator(page,
             locators.cart.continuebtn
         );
 
-        this.checkoutbtn=getLocator(page,
+        this.checkoutbtn=getSelfHealingLocator(page,
             locators.cart.checkoutbtn
         );
-        this.fnmaedetail=getLocator(page,
+        this.fnmaedetail=getSelfHealingLocator(page,
             locators.cart.fnmaedetail
         );
-        this.lnmaedetail=getLocator(page,
+        this.lnmaedetail=getSelfHealingLocator(page,
             locators.cart.lnmaedetail
         );
-        this.zipcode=getLocator(page,
+        this.zipcode=getSelfHealingLocator(page,
             locators.cart.zipcode
         );
-        this.continuebutton=getLocator(page,
+        this.continuebutton=getSelfHealingLocator(page,
             locators.cart.continuebutton
         );
-        this.totalprice=getLocator(page,
+        this.totalprice=getSelfHealingLocator(page,
             locators.cart.totalprice
         );
-        this.finishbtn=getLocator(page,
+        this.finishbtn=getSelfHealingLocator(page,
             locators.cart.finishbtn
         );
 

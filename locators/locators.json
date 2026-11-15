@@ -1,72 +1,240 @@
 {
   "loginPage": {
     "username": {
+      "primary": {
       "type": "id",
       "value": "user-name"
-    },
+      },
+      "fallbacks": [
+        {
+          "type": "placeholder",
+          "value": "Usernames"
+        },
+        {
+          "type": "css",
+          "value": "[data-test='unames']"
+        }
+    ]
+  },
     "password": {
+      "primary": {
       "type": "id",
-      "value": "password"
-    },
+      "value": "passwords"
+      },
+      "fallbacks": [
+        {
+          "type": "placeholder",
+          "value": "Passord"
+        },
+        {
+          "type": "css",
+          "value": "[data-test='pasword']"
+        }
+    ]
+  },
     "loginButton": {
+      "primary": {
       "type": "id",
       "value": "login-button"
-    },
+      },
+      "fallbacks": [
+        {
+          "type": "name",
+          "value": "login-button"
+        },
+        {
+          "type": "css",
+          "value": "[data-test='login-button']"
+        }
+     ]
+   },
     "errorMessage": {
+      "primary": {
       "type": "role",
       "value": "alert"
+      },
+      "fallbacks": [
+        {
+          "type": "css",
+          "value": "[data-test='error']"
+        }
+     ]
     }
   },
   "products": {
     "productCard": {
+      "primary": {
       "type": "css",
       "value": "[data-test='inventory-item']"
+      },
+      "fallbacks": [
+        {
+          "type": "class",
+          "value": "inventory_item"
+        }
+     ]
     },
     "productName": {
+      "primary": {
       "type": "css",
-      "value": "[data-test='inventory-item-name']"
+      "value": "[data-test='inventory-item-names']"
+      },
+      "fallbacks": [
+        {
+          "type": "class",
+          "value": "inventory_item_name"
+        }
+     ]
     },
     "productPrice": {
+      "primary": {
       "type": "css",
       "value": "[data-test='inventory-item-price']"
+      },
+      "fallbacks": [
+        {
+          "type": "class",
+          "value": "inventory_item_price"
+        }
+     ]
     },
     "carticon":{
-      "type":"css",
-      "value":"[data-test='shopping-cart-link']"
+      "primary": {
+      "type": "css",
+      "value": "[data-test='shopping-cart-links']"
+      },
+      "fallbacks": [
+        {
+          "type": "class",
+          "value": "shopping_cart_link"
+        }
+     ]
     }
   },
   "cart":{
     "continuebtn":{
-      "type":"id",
-      "value":"continue-shopping"
+      "primary": {
+      "type": "id",
+      "value": "continue-shopping"
+      },
+      "fallbacks": [
+        {
+          "type": "name",
+          "value": "continue-shopping"
+        },
+        {
+          "type": "css",
+          "value": "[data-test='continue-shopping']"
+        }
+     ]
     },
     "checkoutbtn":{
-      "type":"id",
-      "value":"checkout"
+      "primary": {
+      "type": "id",
+      "value": "checkout"
+      },
+      "fallbacks": [
+        {
+          "type": "name",
+          "value": "checkout"
+        },
+        {
+          "type": "css",
+          "value": "[data-test='checkout']"
+        }
+     ]
     },
     "fnmaedetail":{
-      "type":"id",
-      "value":"first-name"
+      "primary": {
+      "type": "id",
+      "value": "first-name"
+      },
+      "fallbacks": [
+        {
+          "type": "placeholder",
+          "value": "First Name"
+        },
+        {
+          "type": "css",
+          "value": "[data-test='firstName']"
+        }
+     ]
     },
     "lnmaedetail":{
-      "type":"id",
-      "value":"last-name"
+      "primary": {
+      "type": "id",
+      "value": "last-name"
+      },
+      "fallbacks": [
+        {
+          "type": "placeholder",
+          "value": "Last Name"
+        },
+        {
+          "type": "css",
+          "value": "[data-test='lastName']"
+        }
+     ]
     },
     "zipcode":{
-      "type":"id",
-      "value":"postal-code"
+      "primary": {
+      "type": "id",
+      "value": "postal-code"
+      },
+      "fallbacks": [
+        {
+          "type": "placeholder",
+          "value": "Zip/Postal Code"
+        },
+        {
+          "type": "css",
+          "value": "[data-test='postalCode']"
+        }
+     ]
     },
     "continuebutton":{
-      "type":"id",
-      "value":"continue"
+      "primary": {
+      "type": "id",
+      "value": "continue"
+      },
+      "fallbacks": [
+        {
+          "type": "name",
+          "value": "continue"
+        },
+        {
+          "type": "css",
+          "value": "[data-test='continue']"
+        }
+     ]
     },
     "totalprice":{
-      "type":"css",
-      "value":"[data-test='subtotal-label']"
+      "primary": {
+      "type": "css",
+      "value": "[data-test='subtotal-label']"
+      },
+      "fallbacks": [
+        {
+          "type": "class",
+          "value": "summary_subtotal_label"
+        }
+     ]
       },
     "finishbtn":{
-      "type":"id",
-      "value":"finish"
+      "primary": {
+      "type": "id",
+      "value": "finish"
+      },
+      "fallbacks": [
+        {
+          "type": "name",
+          "value": "finish"
+        },
+        {
+          "type": "css",
+          "value": "[data-test='finish']"
+        }
+     ]
     }
   }
 }
